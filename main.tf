@@ -122,7 +122,6 @@ locals {
   datastore = yamldecode(data.terraform_remote_state.global.outputs.datastore)
   vspherecluster = yamldecode(data.terraform_remote_state.global.outputs.vspherecluster)
   resource_pool = yamldecode(data.terraform_remote_state.global.outputs.resource_pool)
-  tforg = yamldecode(data.terraform_remote_state.global.outputs.tforg)
 
 }
 
