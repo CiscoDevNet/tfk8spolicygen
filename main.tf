@@ -48,6 +48,7 @@ module "infra_config_policy" {
   vc_resource_pool = local.resource_pool
   vc_password      = local.password
   org_name         = local.organization
+  version          = "1.0.1"
 }
 
 module "ip_pool_policy" {
@@ -58,6 +59,7 @@ module "ip_pool_policy" {
   netmask          = local.netmask
   gateway          = local.gateway
   primary_dns      = local.primary_dns
+  version          = "1.0.1"
 
   org_name = local.organization
 }
@@ -71,6 +73,7 @@ module "network" {
   timezone    = local.timezone
   domain_name = local.domain_name
   org_name    = local.organization
+  version     = "1.0.1"
 }
 
 module "k8s_version" {
@@ -79,6 +82,7 @@ module "k8s_version" {
   k8s_version_name = local.k8s_version_name 
 
   org_name = local.organization
+  version          = "1.0.1"
 }
 
 data "intersight_organization_organization" "organization" {
