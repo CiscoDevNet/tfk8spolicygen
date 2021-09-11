@@ -120,7 +120,7 @@ locals {
   gateway = yamldecode(data.terraform_remote_state.global.outputs.gateway)
   infra_config_policy = yamldecode(data.terraform_remote_state.global.outputs.infra_config_policy)
   device_name = yamldecode(data.terraform_remote_state.global.outputs.device_name)
-  portgroup = yamldecode(data.terraform_remote_state.global.outputs.portgroup) 
+  portgroup = data.terraform_remote_state.global.outputs.portgroup 
   password = yamldecode(data.terraform_remote_state.global.outputs.password) 
 #  portgroup = "VM Network" 
   datastore = yamldecode(data.terraform_remote_state.global.outputs.datastore)
