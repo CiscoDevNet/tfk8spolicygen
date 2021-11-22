@@ -2,13 +2,16 @@
 data "terraform_remote_state" "global" {
   backend = "remote"
   config = {
-    organization = "Lab14"
+    organization = var.org
     workspaces = {
       name = var.globalwsname
     }
   }
 }
 
+variable "org" {
+  type        = string
+}
 variable "globalwsname" {
   type        = string
   description = "TFCB workspace name that has all of the global variables"
